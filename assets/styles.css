@@ -1,0 +1,1181 @@
+/* =========================
+   Base / Reset
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  cursor: url("./images/cur.png") 0 0, auto;
+  overflow-x: hidden;
+}
+
+/* Links use pointer cursor */
+a,
+li,
+#openPdfButton {
+  cursor: url("./images/cur2.png") 0 0, pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes float-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #fff;
+  }
+}
+
+/* Angel hover shake */
+@keyframes angel-shake {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-1px) rotate(-0.6deg);
+  }
+
+  50% {
+    transform: translateY(1px) rotate(0.6deg);
+  }
+
+  75% {
+    transform: translateY(-0.5px) rotate(-0.3deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Clouds ambient movement */
+@keyframes cloud-ambient {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  20% {
+    transform: translate3d(18px, -10px, 0);
+  }
+
+  40% {
+    transform: translate3d(-12px, -18px, 0);
+  }
+
+  60% {
+    transform: translate3d(-22px, -6px, 0);
+  }
+
+  80% {
+    transform: translate3d(14px, 12px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* =========================
+   HERO / OPENING 
+========================= */
+.container,
+.opening-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.opening-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  transform: translate(-50%, -50%);
+}
+
+.header-text {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Courier Prime", monospace;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  text-shadow: 4px 4px 6px rgb(14 14 14);
+}
+
+#name {
+  text-shadow: 4px 4px 6px rgb(14 14 14);
+}
+
+#title {
+  font-size: 2rem;
+}
+
+/* Scroll icon */
+.svg-holder {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 9vh;
+}
+
+.svg-icon {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float-up 2s infinite alternate;
+}
+
+.svg-icon svg {
+  cursor: url("cur2.png") 0 0, pointer;
+}
+
+/* =========================
+   ABOUT / CV SECTION
+========================= */
+.cv-container {
+  display: flex;
+  width: 100%;
+  height: 110vh;
+  align-items: center;
+  padding: 10vh;
+}
+
+.cv-img {
+  width: 33%;
+  height: 100%;
+}
+
+.cv-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cv-text {
+  width: 70%;
+  height: 60%;
+  display: flex;
+  padding: 3vh;
+  background: url("./images/textbackground.png") center / cover no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.about_p {
+  font-family: "Lora", serif;
+  font-size: 25px;
+  padding: 30px;
+}
+
+/* =========================
+   PROCESS SECTION
+========================= */
+.process {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lora", serif;
+}
+
+.process_p {
+  width: 90%;
+  height: 95vh;
+  display: flex;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.process_p_left,
+.process_p_right {
+  height: 95vh;
+}
+
+.process_p_left {
+  width: 35%;
+  padding-top: 5%;
+  font-size: 30px;
+}
+
+.process_p_right {
+  width: 65%;
+  display: flex;
+}
+
+.first {
+  width: 60%;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.second {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.second p {
+  line-height: 2em;
+  color: #595959;
+}
+
+/* =========================
+   SHOWCASE SECTION
+========================= */
+.showcase-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  overflow: hidden;
+  margin-bottom: 2vh;
+}
+
+/* Sky background only inside showcase */
+.showcase-container .sky-layer--interactive {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+/* Foreground content stays above the sky */
+.showcase-container .angel,
+.showcase-container .showcase-center {
+  position: relative;
+  z-index: 2;
+}
+
+.angel {
+  margin-top: 15px;
+  width: 25%;
+  animation: float-up 1s infinite alternate;
+}
+
+.angel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.angel:hover img {
+  animation: angel-shake 0.4s ease-in-out;
+}
+
+.showcase-center {
+  width: 49%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.frame {
+  height: 80%;
+  width: 63%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Your existing decorative cloud (NOT affected) */
+.clouds {
+  height: 43%;
+  position: absolute;
+  bottom: 1%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float-up 3s infinite alternate;
+}
+
+.cv {
+  position: absolute;
+  width: 41%;
+  top: 12%;
+  height: 56vh;
+  z-index: 4;
+  transition: transform 1s ease;
+}
+
+.frame img,
+.clouds img,
+.cv img {
+  width: 100%;
+  height: 100%;
+}
+
+.cv:hover {
+  cursor: url("cur2.png") 0 0, pointer;
+}
+
+/* =========================
+   MARQUEE
+========================= */
+.marq {
+  border: 1px solid #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-size: 69px;
+}
+
+.marq_text {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.marq:first-of-type {
+  border-bottom: 0;
+}
+
+.marq_inner {
+  display: flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+}
+
+.marq img {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+.bottom_footer {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f3f31c;
+}
+
+.bottom_footer_items {
+  width: 80%;
+}
+
+.email {
+  font-family: "Share Tech Mono", monospace;
+  text-align: center;
+  font-weight: bold;
+  font-size: 55px;
+}
+
+.email a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 10%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fa-brands {
+  font-size: 30px;
+  color: #000;
+  transition: transform 0.2s linear;
+}
+
+.fa-brands:hover {
+  transform: scale(1.15);
+}
+
+.copy {
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy p {
+  color: #fff;
+  font-family: "Share Tech Mono", monospace;
+  margin: 0;
+}
+
+/* =========================
+   INTERACTIVE SKY (scoped)
+========================= */
+.sky-layer--interactive {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  --mx: 0;
+  --my: 0;
+}
+
+.sky-layer--interactive .cloud {
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  width: var(--size);
+  opacity: 0.55;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.sky-layer--interactive .cloud--ambient {
+  animation: cloud-ambient 26s ease-in-out infinite;
+  animation-delay: var(--phase, 0s);
+}
+
+.sky-layer--interactive .cloud img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sky-layer--interactive .cloud__inner {
+  transform: translate3d(calc(var(--mx) * var(--depth) * 1px),
+      calc(var(--my) * var(--depth) * 1px),
+      0);
+  transition: transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.sky-layer--interactive.is-leaving .cloud__inner {
+  transition-duration: 700ms;
+}
+
+/* =========================
+   ZZZ EFFECT (sleep)
+========================= */
+.cv.is-sleepy {
+  overflow: visible;
+}
+
+.cv.is-sleepy .zzz-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 25;
+  --zzz-x: 40%;
+  --zzz-y: 18%;
+}
+
+.cv.is-sleepy .zzz {
+  position: absolute;
+  left: var(--zzz-x);
+  top: var(--zzz-y);
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity, filter;
+  filter: drop-shadow(1px 1px 0 rgba(255, 255, 255, 0.35));
+}
+
+@keyframes zzz-float {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(0.7) rotate(-6deg);
+  }
+
+  10% {
+    opacity: 0.95;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate3d(var(--dx), var(--dy), 0) scale(var(--s)) rotate(10deg);
+  }
+}
+
+/* =========================
+   AWAKE MODE + PUPILS (NEW)
+========================= */
+
+/* Tune these 5 values and you’re done */
+/* Tune these values */
+#openPdfButton {
+  --eyeL-x: 34.6;
+  --eyeL-y: 32.3;
+  --eyeR-x: 47.9;
+  --eyeR-y: 32.3;
+  --pupil-max: 4;
+}
+
+/* layer that holds pupils */
+#openPdfButton .eyes-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 26;
+  transition: opacity 200ms ease;
+}
+
+#openPdfButton .eyes-layer.is-on {
+  opacity: 1;
+}
+
+/* pupil images (anchored + moved via vars) */
+#openPdfButton .pupil {
+  position: absolute;
+  width: 24px;
+  height: 15px;
+
+  /* IMPORTANT: keep centered, then add JS offsets */
+  transform: translate(calc(-50% + var(--px, 0px)),
+      calc(-50% + var(--py, 0px)));
+
+  transition: transform 60ms linear;
+  will-change: transform;
+  opacity: 0.95;
+  filter: drop-shadow(1px 1px 0 rgba(255, 255, 255, 0.25));
+}
+
+/* place pupils at socket centers (NO transform here anymore) */
+#openPdfButton .pupil--left {
+  left: calc(var(--eyeL-x) * 1%);
+  top: calc(var(--eyeL-y) * 1%);
+}
+
+#openPdfButton .pupil--right {
+  left: calc(var(--eyeR-x) * 1%);
+  top: calc(var(--eyeR-y) * 1%);
+}
+
+/* When awake, we don’t want Zs visually lingering */
+#openPdfButton.is-awake .zzz-layer {
+  display: none;
+}
+
+
+/* =========================
+   CLICK SHAKE (painting)
+========================= */
+@keyframes painting-shake {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  15% {
+    transform: translate3d(-2px, 1px, 0) rotate(-0.4deg);
+  }
+
+  30% {
+    transform: translate3d(2px, -1px, 0) rotate(0.4deg);
+  }
+
+  45% {
+    transform: translate3d(-2px, -1px, 0) rotate(-0.3deg);
+  }
+
+  60% {
+    transform: translate3d(2px, 1px, 0) rotate(0.3deg);
+  }
+
+  75% {
+    transform: translate3d(-1px, 0px, 0) rotate(-0.2deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+/* apply shake to the whole painting container */
+#openPdfButton.is-shaking {
+  animation: painting-shake 500ms ease-in-out;
+}
+
+/* optional: slightly smoother on GPU */
+#openPdfButton {
+  will-change: transform;
+}
+
+.title-small {
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Lora", serif;
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -0.02em;
+
+  font-size: 90px;
+  color: #fff;
+
+  z-index: 2;
+}
+
+.title-small span {
+  display: block;
+}
+
+
+/* =========================================================
+   PAGE 1 INTRO OVERLAY (SAFE, SCOPED)
+   Paste at END of styles.css
+========================================================= */
+
+/* Scroll space for Page 1 */
+.intro-spacer {
+  height: calc(110vh);
+  background-color: #242424;
+  ;
+}
+
+/* Fullscreen intro overlay */
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #242424;
+  overflow: hidden;
+  isolation: isolate;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transition:
+    opacity 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Spinning flower */
+.intro__flower {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: min(72vmin, 760px);
+  height: auto;
+
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: intro-spin 25s linear infinite;
+
+  opacity: 0.95;
+  pointer-events: none;
+  user-select: none;
+
+  transition:
+    opacity 900ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 900ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Large title */
+.intro__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+  will-change: transform;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Lora", serif;
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -0.02em;
+
+  font-size: clamp(120px, 18vw, 320px);
+  color: #fff;
+
+  z-index: 2;
+  mix-blend-mode: difference;
+
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+.intro__title span {
+  display: block;
+}
+
+/* Spin animation */
+@keyframes intro-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* =========================================================
+   INTRO FINISHED → PAGE 2 FULLY REVEALED
+========================================================= */
+
+body.intro-done .intro {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.intro-done .intro__flower {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.85);
+}
+
+.marq-foot {
+  border: 1px solid #000;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* ⬅️ important */
+  white-space: nowrap;
+  /* ⬅️ important */
+}
+
+.marq-inner-foot {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.dot {
+  font-size: 75px;
+  margin: 0 20px;
+  display: inline-block;
+}
+
+.marq-img {
+  height: 100px;
+  width: auto;
+  margin: 0 20px;
+  display: inline-block;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1024px) {
+  .intro-spacer {
+    height: 120vh;
+  }
+
+  .intro__title {
+    font-size: clamp(72px, 13vw, 180px);
+  }
+
+  .cv-container {
+    min-height: 100vh;
+    height: auto;
+    padding: 8vh 6vw;
+    gap: 4vh;
+    flex-direction: column;
+  }
+
+  .cv-img,
+  .cv-text {
+    width: 100%;
+  }
+
+  .cv-img {
+    height: auto;
+  }
+
+  .cv-img img {
+    max-height: 56vh;
+    border-radius: 4px;
+  }
+
+  .cv-text {
+    height: auto;
+    padding: 4vh 4vw;
+  }
+
+  .about_p {
+    font-size: clamp(18px, 2.4vw, 24px);
+    line-height: 1.65;
+    padding: 12px;
+  }
+
+  .marq {
+    font-size: clamp(34px, 5.2vw, 54px);
+    height: 110px;
+  }
+
+  .process {
+    height: auto;
+    min-height: 100vh;
+    align-items: flex-start;
+    padding: 6vh 0;
+  }
+
+  .process_p {
+    height: auto;
+    min-height: 86vh;
+  }
+
+  .process_p_left,
+  .process_p_right {
+    height: auto;
+  }
+
+  .process_p_left {
+    width: 30%;
+    font-size: clamp(24px, 3vw, 34px);
+  }
+
+  .process_p_right {
+    width: 70%;
+    gap: 18px;
+  }
+
+  .first {
+    display: none;
+  }
+
+  .second {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .second p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: clamp(14px, 1.5vw, 18px);
+  }
+
+  #openPdfButton .pupil {
+    width: 20px;
+    height: 13px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sky-layer--interactive .cloud {
+    width: calc(var(--size) * 0.62);
+    opacity: 0.36;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  a,
+  li,
+  #openPdfButton {
+    cursor: pointer;
+  }
+
+  .intro-spacer {
+    height: 120vh;
+  }
+
+  .intro__flower {
+    width: min(86vmin, 500px);
+  }
+
+  .intro__title {
+    font-size: clamp(54px, 14vw, 108px);
+    line-height: 0.94;
+  }
+
+  .cv-container {
+    padding: 6vh 5vw;
+    gap: 3vh;
+  }
+
+  .cv-img img {
+    max-height: 50vh;
+  }
+
+  .cv-text {
+    padding: 3vh 4vw;
+  }
+
+  .about_p {
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 8px 4px;
+  }
+
+  .marq {
+    font-size: clamp(24px, 7vw, 40px);
+    height: 84px;
+  }
+
+  .process {
+    min-height: auto;
+    padding: 6vh 0;
+  }
+
+  .process_p {
+    width: 92%;
+    min-height: auto;
+    border-bottom: 0;
+    flex-direction: column;
+    gap: 3vh;
+  }
+
+  .process_p_left,
+  .process_p_right,
+  .first,
+  .second {
+    width: 100%;
+  }
+
+  .process_p_left {
+    padding-top: 0;
+    font-size: clamp(28px, 8vw, 44px);
+  }
+
+  .process_p_right {
+    flex-direction: column;
+    gap: 3vh;
+  }
+
+  .first {
+    display: none;
+  }
+
+  .second p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .angel {
+    display: none;
+  }
+
+  .showcase-container {
+    height: clamp(500px, 70vh, 760px);
+    min-height: 500px;
+  }
+
+  .showcase-center {
+    width: min(95vw, 560px);
+    max-width: 95vw;
+    height: 100%;
+  }
+
+  .frame {
+    width: 100%;
+    height: clamp(320px, 82%, 620px);
+  }
+
+  .cv {
+    width: clamp(230px, 65%, 360px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 11%;
+    height: clamp(280px, 61%, 470px);
+  }
+
+  .clouds {
+    width: min(112vw, 600px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 59%;
+    bottom: auto;
+    height: auto;
+    max-height: 39%;
+  }
+
+  .clouds img {
+    height: auto;
+  }
+
+  .sky-layer--interactive .cloud {
+    width: calc(var(--size) * 0.58);
+    opacity: 0.32;
+  }
+
+  .sky-layer--interactive .cloud:nth-child(odd) {
+    display: none;
+  }
+
+  #openPdfButton .pupil {
+    width: 16px;
+    height: 10px;
+  }
+
+  #paintingImage {
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+@media (max-width: 600px) {
+  .cv-container {
+    padding: 5vh 4vw;
+  }
+
+  .about_p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .marq {
+    font-size: clamp(20px, 8vw, 32px);
+    height: 72px;
+  }
+
+  .showcase-container {
+    height: clamp(470px, 68vh, 700px);
+    min-height: 470px;
+  }
+
+  .showcase-center {
+    width: min(96vw, 500px);
+  }
+
+  .cv {
+    width: clamp(200px, 66%, 320px);
+    height: clamp(250px, 60%, 400px);
+  }
+
+  .clouds {
+    width: min(118vw, 520px);
+    top: 60%;
+    max-height: 38%;
+  }
+}
+
+@media (max-width: 420px) {
+  .intro__title {
+    font-size: clamp(42px, 14vw, 72px);
+  }
+
+  .about_p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .marq {
+    font-size: clamp(18px, 8.4vw, 28px);
+    height: 66px;
+  }
+
+  .showcase-container {
+    height: clamp(430px, 65vh, 620px);
+    min-height: 430px;
+  }
+
+  .showcase-center {
+    width: min(97vw, 420px);
+  }
+
+  .cv {
+    width: clamp(180px, 68%, 280px);
+    height: clamp(220px, 58%, 340px);
+    top: 12%;
+  }
+
+  .clouds {
+    width: min(122vw, 460px);
+    top: 61%;
+    max-height: 37%;
+  }
+
+  #openPdfButton .pupil {
+    width: 14px;
+    height: 9px;
+  }
+}

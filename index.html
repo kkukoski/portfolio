@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kliment Kukoski</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/styles.css" />
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/1c18350f6f.js" crossorigin="anonymous" defer></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Elite&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Your scripts (defer = run after HTML is parsed) -->
+  <script src="./js/intro.js" defer></script>
+  <script src="./js/page.js" defer></script>
+
+</head>
+
+<body>
+  <!-- =========================
+         PAGE 1: INTRO OVERLAY
+         (covers page 2 until scroll completes)
+    ========================== -->
+  <section class="intro" id="intro" aria-hidden="true">
+    <!-- NOTE: make sure this exists: ./assets/images/flower.png -->
+    <img class="intro__flower" src="./assets/images/flower.png" alt="" />
+
+    <h1 class="intro__title" aria-label="Kliment Kukoski.">
+      <span>Kliment</span>
+      <span>Kukoski.</span>
+    </h1>
+  </section>
+
+  <!-- Scroll space for Page 1 (so scaling can happen) -->
+  <div class="intro-spacer" aria-hidden="true"></div>
+
+  <!-- =========================
+         PROFILE / ABOUT SECTION
+    ========================== -->
+  <div id="profile" class="cv-container">
+    <div class="cv-img">
+      <img src="./assets/images/me.jpg" alt="Kliment Kukoski" loading="lazy" />
+    </div>
+
+    <div class="cv-text">
+      <div class="about_item_right">
+        <p class="about_p">
+          I’m an independent and curious front-end developer who loves pushing
+          boundaries and exploring what the web can do. I’m driven by
+          continuous learning and improvement, always looking for new
+          challenges that sharpen my skills and keep me ahead in an
+          ever-evolving tech landscape.
+        </p>
+
+        <p class="about_p">
+          While traditional art isn’t my medium, the web is. I express
+          creativity through thoughtful UI, clean code, and user-focused
+          experiences. Working primarily with React, and combining development
+          with project management, I enjoy building intuitive, engaging
+          applications that feel good to use—and keep users coming back.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <marquee class="marq" width="calc(99% - 1px)" direction="right" height="150px">
+    <p class="marq_text">Built with patience, guided by curiosity.</p>
+  </marquee>
+
+  <marquee class="marq" width="calc(99% - 1px)" direction="left" height="150px">
+    <p class="marq_text">I believe beauty lives in restraint and intention.</p>
+  </marquee>
+
+  <!-- =========================
+         PROCESS SECTION
+    ========================== -->
+  <div class="process">
+    <div class="process_p">
+      <div class="process_p_left">
+        <h1>Process</h1>
+      </div>
+
+      <div class="process_p_right">
+        <div class="first">
+          <p>Creative Approach</p>
+          <p>Design Strategy</p>
+          <p>Production &amp; Implementation</p>
+        </div>
+
+        <div class="second">
+          <p>
+            I dive into new projects by immersing myself in research and truly
+            understanding the problem at hand. Whether it's exploring user
+            personas, brainstorming over coffee, or sketching wild ideas on a
+            whiteboard, I do whatever it takes to connect with the project or
+            client. It's all about finding that spark of inspiration to drive
+            the design forward.
+          </p>
+
+          <p>
+            This is where the magic starts. I gather all my research, pull
+            together a few design directions, and start creating prototypes.
+            I experiment with colors, fonts, and layouts, treating it like a
+            playground where creativity runs wild and I get a real feel for
+            the product before moving into development.
+          </p>
+
+          <p>
+            Once the design is solid, it's time to bring it to life. I
+            collaborate closely with developers, bouncing ideas back and forth
+            and fine-tuning every detail. We run through quality assurance and
+            rigorous testing to ensure everything works perfectly and looks
+            stunning. It's like putting the final touches on a masterpiece,
+            aiming to wow users and clients alike.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================
+         SHOWCASE / CV SECTION
+    ========================== -->
+  <div class="showcase-container">
+    <div class="sky-layer sky-layer--interactive" id="sky">
+      <div class="cloud cloud--ambient" style="--top: 8%; --left: 6%; --size: 380px; --depth: 16; --phase: -2s;">
+        <div class="cloud__inner">
+          <img src="./assets/images/clod.png" alt="" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="cloud cloud--ambient" style="
+            --top: 12%;
+            --left: 50%;
+            --size: 420px;
+            --depth: 24;
+            --phase: -13s;
+            transform: translateX(-50%);
+          ">
+        <div class="cloud__inner">
+          <img src="./assets/images/clod.png" alt="" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="cloud cloud--ambient" style="--top: 18%; --left: 38%; --size: 460px; --depth: 26; --phase: -9s;">
+        <div class="cloud__inner">
+          <img src="./assets/images/clod.png" alt="" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="cloud cloud--ambient" style="--top: 30%; --left: 72%; --size: 340px; --depth: 18; --phase: -14s;">
+        <div class="cloud__inner">
+          <img src="./assets/images/clod.png" alt="" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="cloud cloud--ambient" style="--top: 48%; --left: 12%; --size: 520px; --depth: 38; --phase: -6s;">
+        <div class="cloud__inner">
+          <img src="./assets/images/clod.png" alt="" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="cloud cloud--ambient" style="--top: 58%; --left: 54%; --size: 420px; --depth: 30; --phase: -18s;">
+        <div class="cloud__inner">
+          <img src="./assets/images/clod.png" alt="" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="cloud cloud--ambient" style="--top: 68%; --left: 82%; --size: 300px; --depth: 20; --phase: -11s;">
+        <div class="cloud__inner">
+          <img src="./assets/images/clod.png" alt="" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <div class="angel angel-left">
+      <img src="./assets/images/angel_left.png" alt="" loading="lazy" />
+    </div>
+
+    <div class="showcase-center">
+      <div class="frame">
+        <img src="./assets/images/pngwing.com.png" alt="" loading="lazy" />
+      </div>
+
+      <div id="openPdfButton" class="cv is-sleepy" role="button" tabindex="0" aria-label="Open CV PDF"
+        data-normal-src="./assets/images/sleepyjoe.png" data-awake-src="./assets/images/whiteh.png">
+        <img id="paintingImage" src="./assets/images/sleepyjoe.png" alt="Open CV" loading="lazy" draggable="false" />
+
+        <div class="zzz-layer" aria-hidden="true"></div>
+
+        <div class="eyes-layer" aria-hidden="true">
+          <img class="pupil pupil--left" src="./assets/images/eye.png" alt="" draggable="false" />
+          <img class="pupil pupil--right" src="./assets/images/eye.png" alt="" draggable="false" />
+        </div>
+      </div>
+
+      <div class="clouds">
+        <img src="./assets/images/clod.png" alt="" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="angel angel-right">
+      <img src="./assets/images/angel_right.png" alt="" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- ================= CONTACT SCENE (DROP-IN SECTION) =================
+Paste this whole block near the bottom of your page (right before </body>).
+
+Keep the folder structure:
+  /assets/contact_styles.css
+  /assets/contact.js
+  /assets/contact-img/ (all images)
+
+If your project uses a bundler, just make sure these files are served and paths resolve.
+========================================================================= -->
+
+  <link rel="stylesheet" href="./assets/contact_styles.css">
+
+  <section id="contact-scene-root" aria-label="Contact scene">
+    <div class="stage" id="stage">
+      <!-- Backgrounds -->
+      <div class="bg" id="bgDay"><img src="./assets/contact-img/day.png" alt=""></div>
+      <div class="bg" id="bgPreSunset"><img src="./assets/contact-img/presunset.png" alt=""></div>
+      <div class="bg" id="bgSunset"><img src="./assets/contact-img/sunset.png" alt=""></div>
+      <div class="bg" id="bgPreNight"><img src="./assets/contact-img/prenight.png" alt=""></div>
+      <div class="bg" id="bgContactNight"><img src="./assets/contact-img/contactscreen_night.png" alt=""></div>
+
+      <!-- Foregrounds -->
+      <div class="layer mountain" id="mountain1"><img src="./assets/contact-img/mountain1.png" alt=""></div>
+      <div class="layer forest" id="forest1"><img src="./assets/contact-img/forest1.png" alt=""></div>
+      <div class="layer mountain" id="mountain2"><img src="./assets/contact-img/mountaincloser.png" alt=""></div>
+      <div class="layer forest" id="forest2"><img src="./assets/contact-img/forest2.png" alt=""></div>
+
+      <!-- Stars -->
+      <div class="stars" id="stars"><img src="./assets/contact-img/starryskylayer.png" alt=""></div>
+
+      <div class="ui">
+        <div class="hint" id="hint">Scroll to begin</div>
+        <div class="headline" id="headline">Headline</div>
+        <div id="startJourney" class="start-journey">scroll your journey</div>
+        <div id="startJourneyChevron" class="start-journey-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+                fill="#FFFFFF"></path>
+            </g>
+          </svg></div>
+        <div class="contact-wrap">
+          <div class="contact-stack">
+            <a id="contact" class="contact" href="mailto:klimentkukoski@gmail.com">
+              Contact me: klimentkukoski@gmail.com
+            </a>
+            <div id="contactSocial" class="contact-social" aria-label="Social links">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                      fill="#F0C251"></path>
+                    <path
+                      d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                      fill="#F0C251"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                      fill="#F0C251"></path>
+                  </g>
+                </svg></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg fill="#000000"
+                  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 512 512" xml:space="preserve">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g id="7935ec95c421cee6d86eb22ecd125aef">
+                      <path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;"
+                        d="M116.504,500.219V170.654H6.975v329.564H116.504 L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941 C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219 c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533 c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531 c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z">
+                      </path>
+                    </g>
+                  </g>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================== -->
+
+  <script src="./js/contact.js"></script>
+</body>
+
+</html>
