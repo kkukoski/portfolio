@@ -6,6 +6,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    document.documentElement.classList.add("is-loading");
+  </script>
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png" />
@@ -33,12 +36,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Your scripts (defer = run after HTML is parsed) -->
+  <script src="./js/loader.js" defer></script>
   <script src="./js/intro.js" defer></script>
   <script src="./js/page.js" defer></script>
 
 </head>
 
 <body>
+  <div id="pageLoader" class="page-loader" role="status" aria-live="polite" aria-label="Page loading">
+    <div class="page-loader__inner">
+      <p class="page-loader__text">Loading</p>
+      <p class="page-loader__count"><span id="pageLoaderCount">0</span>%</p>
+    </div>
+  </div>
+
   <!-- =========================
          PAGE 1: INTRO OVERLAY
          (covers page 2 until scroll completes)
